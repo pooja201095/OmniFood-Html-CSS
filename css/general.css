@@ -1,0 +1,198 @@
+/*
+          SPACING SYSTEM (px)
+          2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+
+          FONT SIZE SYSTEM (px)
+          10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+
+          MAIN COLOR: #e67e22
+          GREYs: #555
+
+          Tint: #fdf2e9
+          Shade: #cf711f
+
+          Border Rad: 9px
+
+          LineHeight default:1
+           para:1.6
+           Small:1.05
+*/
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+*:focus {
+  outline: none;
+  box-shadow: 0 0 1.2rem #f3821fe7;
+}
+
+html {
+  /* 10/16 - 16 is the default browser font-size */
+  /* Required for rem calculations */
+  font-size: 62.5%;
+  overflow-x: hidden;
+
+  /* Does not work on safari */
+  /* scroll-behavior: smooth; */
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  line-height: 1;
+  font-weight: 400;
+  color: #555;
+
+  /* works only if there is nothing absolutely position in relation to body */
+  overflow-x: hidden;
+}
+
+strong {
+  font-weight: 500;
+}
+
+/* General */
+
+.list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+}
+
+.list-item {
+  font-size: 2rem;
+  display: flex;
+  gap: 1.8rem;
+  align-items: center;
+  line-height: 1.6;
+}
+
+.list-item ion-icon {
+  font-size: 2.4rem;
+  color: #e67e22;
+}
+.heading-primary,
+.heading-secondary,
+.heading-tertiary {
+  font-weight: 700;
+  color: #333;
+  letter-spacing: -0.5px;
+}
+
+.heading-primary {
+  font-size: 5.2rem;
+  line-height: 0.9;
+  margin-bottom: 3.2rem;
+}
+
+.heading-secondary {
+  font-size: 4.4rem;
+  line-height: 1.5;
+  margin-bottom: 8rem;
+}
+
+.heading-tertiary {
+  font-size: 3rem;
+  line-height: 1.2;
+  margin-bottom: 3.2rem;
+}
+
+.subheading {
+  display: block;
+  font-size: 2rem;
+  font-weight: 500;
+  color: #cf711f;
+  text-transform: uppercase;
+  margin-bottom: 1.6rem;
+  letter-spacing: 1px;
+}
+
+.btn,
+.btn:link,
+.btn:visited {
+  display: inline-block; /* if not- top margin wont apply*/
+  text-decoration: none;
+  font-size: 2rem;
+  padding: 1.6rem 3.2rem;
+  font-weight: 500;
+  border-radius: 9px;
+  transition: all 0.5s;
+}
+
+.btn-full:link,
+.btn-full:visited {
+  background-color: #e67e22;
+  color: #fff;
+}
+
+.btn-full:hover,
+.btn-full:active {
+  background-color: #cf711f;
+}
+
+.btn-outline:link,
+.btn-outline:visited {
+  color: #555;
+  background-color: #fff;
+}
+
+.btn-outline:hover,
+.btn-outline:active {
+  background-color: #fdf2e9;
+
+  /* border: 3px solid grey; causes layout to jump */
+
+  /* Trick to add border inside the button */
+  box-shadow: inset 0 0 0 3px #e67e22;
+}
+
+.margin-right-sm {
+  margin-right: 1.6rem !important;
+}
+
+.margin-bottom-sm {
+  margin-bottom: 4.8rem !important;
+}
+
+.center-text {
+  text-align: center;
+}
+
+.container {
+  max-width: 114rem;
+  margin: 0 auto;
+  padding: 0 3.2rem;
+}
+
+.grid {
+  display: grid;
+  column-gap: 6.4rem;
+  row-gap: 9.6rem;
+}
+
+.grid:not(:last-child) {
+  margin-bottom: 9.6rem;
+}
+
+.grid--2cols {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.grid--3cols {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.grid--4cols {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.grid--5cols {
+  grid-template-columns: repeat(5, 1fr);
+}
+
+.grid-center-vertical {
+  align-items: center;
+}
